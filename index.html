@@ -6,6 +6,7 @@
 	    var gameUrl = URL.createObjectURL(new Blob([e.target.files[0]]))
 		var extension = e.target.files[0].name.split('.').pop()
 		var gameName = e.target.files[0].name.replaceAll("'", "\\'")
+		var gameName = gameName.substr(0, gameName.length - extension.length - 1)
 		e.target.remove()
 		document.body.innerHTML = ''
 		if (['fds', 'nes', 'unif', 'unf'].includes(extension)) {
