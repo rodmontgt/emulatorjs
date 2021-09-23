@@ -10,15 +10,19 @@
 		e.target.remove()
 		document.body.innerHTML = ''
 		if (['fds', 'nes', 'unif', 'unf'].includes(extension)) {
-		  var core = 'nes';
+		    var core = 'nes';
 		} else if (['z64'].includes(extension)) {
-		  var core = 'n64';
+		    var core = 'n64';
 		} else if (['smc', 'fig', 'sfc', 'gd3', 'gd7', 'dx2', 'bsx', 'swc'].includes(extension)) {
-		  var core = 'snes';
+		    var core = 'snes';
 		} else if (['nds'].includes(extension)) {
-		  var core = 'nds';
+		    var core = 'nds';
+		} else if (['gba'].includes(extension)) {
+		    var core = 'gba';
+		} else if (['gb'].includes(extension)) {
+		    var core = 'gb';
 		} else {
-		  var core = prompt('Input core (examples: nes, snes, n64, gb, gba)');
+		    var core = prompt('Input core (examples: nes, snes, n64, gb, gba, psx)');
 		};
 		var a = document.createElement('div');
 		a.style = "width:640px;height:480px;max-width:100%";
